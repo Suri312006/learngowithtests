@@ -11,4 +11,14 @@
 
 - slices do not encode the size of the collection, and can have any size
     - like vector in rust 
-    - hello 
+    - GO DOES NOT LET YOU USE THE EQUALITY OPERATOR WITH SLICES 
+    
+
+- go allows variadic funcitons: functions that take in a variable
+amount of arguments
+    - SumAll(numbersToSum ...[]int) takes in a variable amount of slices of integers
+    
+
+
+#### Compile time errors are our friend because they help us write software that works
+#### Runtime errors are our enemy because they affect our users
