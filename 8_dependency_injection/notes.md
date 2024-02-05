@@ -15,3 +15,10 @@ how would we test this code?
 
 
 **Our function doesnt need to care _where_ or _how_ the printing happens, so we should accept an _interface_ than a concrete type**
+
+
+
+
+## Summary
+- Motivated by our tests, we refactored the code so we could control where the data was written by __injecting a dependecy__ which allowed us to 
+test our code, seperate our concerns, and allow our code to be used in different contexts
