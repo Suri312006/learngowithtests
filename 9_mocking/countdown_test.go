@@ -77,7 +77,12 @@ Go!`
 		// the reason we are passing around references is so we can
 		// mutate the contents inside of that struct, not just a copy
 		spyTime := &SpyTime{}
-        sleeper := ConfigurableSleeper{sleepTime, spyTime.Sleep}
-        sleeper.Sleep()
+		sleeper := ConfigurableSleeper{sleepTime, spyTime.Sleep}
+		sleeper.Sleep()
+
+
+		if spyTime.durationSlept != sleepTime{
+			t.Errorf("slept %q, wanted %q", spyTime.durationSlept, sleepTime)
+		}
 	})
 }
